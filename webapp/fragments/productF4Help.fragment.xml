@@ -1,0 +1,28 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m">
+<Dialog title="Select Product code ">
+<Table items="{oModel>/Products}">
+
+<columns>
+<Column ><Text text="Product Id"></Text></Column>
+ <Column ><Text text="Product Name"></Text></Column>
+<Column ><Text text="SupplierId"></Text></Column>
+<Column ><Text text="CategoryID"></Text></Column>
+<Column ><Text text="Price"></Text></Column>
+</columns>
+
+<items>
+<ColumnListItem type="Active" press="onPressRowF4Help">
+<Text text="{oModel>ProductID}"></Text>
+<Text text="{oModel>ProductName}"></Text>
+<Text text="{oModel>SupplierID}"></Text>
+<Text text="{oModel>CategoryID}"></Text>
+<Text text="{oModel>UnitPrice}"></Text>
+</ColumnListItem>
+</items>
+</Table>
+
+<endButton>
+<Button text="close" type="Reject" press="onCloseDialog"></Button>
+</endButton>
+</Dialog>
+</core:FragmentDefinition>

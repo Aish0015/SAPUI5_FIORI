@@ -1,0 +1,16 @@
+{
+  "aModelOfContact": [
+    {
+      "text": "Telephone",
+      "key" : "C1"
+    },
+    {
+      "text": "Fax",
+      "key" : "C2"
+    },
+    {
+      "text": "Email",
+      "key" : "C3"
+    }
+  ]
+}

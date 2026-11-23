@@ -1,0 +1,55 @@
+<mvc:View xmlns:core="sap.ui.core"
+    controllerName="com.northwind.project1.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form">
+    <Page id="page">
+     <Table id="idProductsTable" items="{oModel>/Products}" mode="MultiSelect">
+<headerToolbar>
+<Toolbar>
+<Title text="Products Inventory"></Title>
+<ToolbarSpacer ></ToolbarSpacer>
+<Button text="Press Me" type="Emphasized" press="onGetProductId"></Button>
+</Toolbar>
+</headerToolbar>
+                
+                <columns>   
+                    <Column ><Text text="Product ID"></Text></Column>
+                    <Column ><Text text="Product Name"></Text></Column>
+                    <Column ><Text text="SupplierId"></Text></Column>
+                    <Column ><Text text="CategoryID"></Text></Column>
+                    <Column ><Text text="Qty/Unity"></Text></Column>
+                    <Column ><Text text="Price"></Text></Column>
+                    <Column ><Text text="Stock"></Text></Column>
+                    <Column ><Text text="Units order"></Text></Column>
+                    <Column ><Text text="Reorder Level"></Text></Column>
+                    <Column ><Text text="Discontinued"></Text></Column>
+                </columns>
+                <items>
+                    <ColumnListItem type="Navigation" press="onPressrow">
+                    <Text text="{oModel>ProductID}"></Text>
+                    <Text text="{oModel>ProductName}"></Text>
+                    <Text text="{oModel>SupplierID}"></Text>
+                    <Text text="{oModel>CategoryID}"></Text>
+                    <Text text="{oModel>QuantityPerUnit}"></Text>
+                    <Text text="{oModel>UnitPrice}"></Text>
+                    <Text text="{oModel>UnitsInStock}"></Text>
+                    <Text text="{oModel>UnitsOnOrder}"></Text>
+                    <Text text="{oModel>ReorderLevel}"></Text>
+                    <Text text="{oModel>Discontinued}"></Text>
+
+                </ColumnListItem>
+                </items>
+                </Table>
+
+</content>
+
+<footer>
+<Bar >
+<contentRight>
+<Button text="Submit" type="Default" press="onSubmit"></Button>
+</contentRight>
+</Bar>
+     
+    </Page>
+</mvc:View>
